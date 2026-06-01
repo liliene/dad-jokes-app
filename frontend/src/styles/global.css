@@ -1,0 +1,81 @@
+/* =========================================
+   Dad Jokes App — Global Styles
+   Design: Warm retro-editorial meets modern type
+   Palette: Cream, warm amber, deep espresso, electric coral
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* ─── CSS Variables ─────────────────────────────── */
+:root {
+  --cream: #faf6ee;
+  --amber: #f0a500;
+  --amber-light: #ffd166;
+  --amber-pale: #fff3cc;
+  --coral: #ff5e3a;
+  --espresso: #1a0f00;
+  --brown: #3d2000;
+  --brown-mid: #7a4520;
+  --muted: #a88c6e;
+  --border: #e8d9c0;
+  --card-bg: #fffdf8;
+  --shadow: rgba(26, 15, 0, 0.12);
+
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Reset & Base ─────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-display);
+  background-color: var(--cream);
+  color: var(--espresso);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Subtle paper texture via SVG noise */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* ─── Typography ────────────────────────────────── */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+p {
+  line-height: 1.65;
+}
+
+/* ─── Scrollbar ─────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--amber); border-radius: 3px; }
+
+/* ─── Utility ────────────────────────────────────── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

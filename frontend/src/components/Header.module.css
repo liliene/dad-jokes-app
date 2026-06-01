@@ -1,0 +1,78 @@
+.header {
+  width: 100%;
+  background-color: var(--espresso);
+  color: var(--cream);
+  border-bottom: 3px solid var(--amber);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.emoji {
+  font-size: 2.4rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 6px rgba(240, 165, 0, 0.5));
+  animation: sway 3s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}
+
+.title {
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  font-weight: 800;
+  color: var(--amber);
+  letter-spacing: -0.5px;
+}
+
+.tagline {
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.apiLink {
+  color: var(--amber-light);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--amber-light);
+  transition: color var(--transition);
+}
+
+.apiLink:hover {
+  color: var(--amber);
+}
+
+@media (max-width: 480px) {
+  .badge { display: none; }
+  .inner { justify-content: flex-start; }
+}

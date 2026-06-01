@@ -1,0 +1,93 @@
+.form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.inputWrap {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 36px 12px 38px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--espresso);
+  background: var(--card-bg);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.input::placeholder { color: var(--muted); }
+
+.input:focus {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px var(--amber-pale);
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Remove native search clear button */
+.input::-webkit-search-cancel-button { display: none; }
+
+.clearBtn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 4px;
+  border-radius: 50%;
+  transition: color var(--transition), background var(--transition);
+}
+
+.clearBtn:hover {
+  color: var(--espresso);
+  background: var(--border);
+}
+
+.searchBtn {
+  padding: 12px 22px;
+  background: var(--espresso);
+  color: var(--amber);
+  border: 2px solid var(--espresso);
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.searchBtn:hover:not(:disabled) {
+  background: var(--amber);
+  color: var(--espresso);
+  border-color: var(--amber);
+  transform: translateY(-1px);
+}
+
+.searchBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}

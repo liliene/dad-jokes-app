@@ -1,0 +1,18 @@
+.footer {
+  text-align: center;
+  padding: 28px 24px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  margin-top: 60px;
+}
+
+.footer a {
+  color: var(--amber);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--amber);
+  transition: color var(--transition);
+}
+
+.footer a:hover { color: var(--brown-mid); }
