@@ -20,9 +20,10 @@ const PORT = process.env.PORT || 3001;
 
 // CORS: allow only the frontend origin
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: process.env.NODE_ENV === 'production'
+    ? true  // aceita qualquer origem (Vercel gerencia isso)
+    : process.env.FRONTEND_URL || 'http://localhost:5173',
   methods: ['GET'],
-  allowedHeaders: ['Content-Type'],
 }));
 
 // Parse JSON bodies

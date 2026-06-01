@@ -4,7 +4,7 @@
  * Using fetch (built-in) to avoid extra dependencies.
  */
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
 
 /**
  * Fetches a single random joke from the backend.
