@@ -61,7 +61,7 @@ export default function Home() {
         {/* Counter */}
         {fetchCount > 1 && (
           <p className={styles.counter}>
-            You've groaned at <strong>{fetchCount}</strong> jokes today 🎉
+            You laughed in front of <strong>{fetchCount}</strong> jokes today 🎉
           </p>
         )}
       </section>
