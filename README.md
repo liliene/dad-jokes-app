@@ -1,4 +1,4 @@
-[# 🎭 Dad Jokes App
+# 🎭 Dad Jokes App
 
 > A full-stack web application delivering the world's finest groan-worthy humor — built with React.js, Node.js + Express, and the [icanhazdadjoke.com](https://icanhazdadjoke.com) public API.
 
