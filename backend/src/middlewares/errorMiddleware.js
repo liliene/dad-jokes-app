@@ -12,7 +12,6 @@ function errorMiddleware(err, req, res, next) {
   res.status(statusCode).json({
     success: false,
     error: err.message || 'Internal Server Error',
-    // Only expose stack trace in development
     ...(isDev && { stack: err.stack }),
   });
 }

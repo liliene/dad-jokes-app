@@ -6,10 +6,6 @@
 
 const jokeService = require('../services/jokeService');
 
-/**
- * GET /api/jokes/random
- * Returns a single random dad joke.
- */
 async function getRandomJoke(req, res, next) {
   try {
     const joke = await jokeService.getRandomJoke();
@@ -19,15 +15,10 @@ async function getRandomJoke(req, res, next) {
       data: joke,
     });
   } catch (error) {
-    // Pass error to global error middleware
     next(error);
   }
 }
 
-/**
- * GET /api/jokes/search?q=term
- * Searches jokes by a query string term.
- */
 async function searchJokes(req, res, next) {
   try {
     const { q, limit } = req.query;

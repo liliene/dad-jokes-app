@@ -23,7 +23,6 @@ export default function Home() {
     clearResults,
   } = useSearch();
 
-  // When user starts a new random joke, clear any search
   function handleNewJoke() {
     clearResults();
     loadJoke();
