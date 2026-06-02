@@ -36,7 +36,7 @@ Dad Jokes App is a modern, responsive full-stack web application that fetches ra
 ┌─────────────────────────────────────────────────────────────┐
 │                        BROWSER                              │
 │  ┌──────────────────────────────────────────────────────┐   │
-│  │              React Frontend (Port 5173)               │   │
+│  │              React Frontend (Port 5173)              │   │
 │  │   Components → Custom Hooks → Service Layer (fetch)  │   │
 │  └──────────────────┬───────────────────────────────────┘   │
 └─────────────────────┼───────────────────────────────────────┘
@@ -44,10 +44,10 @@ Dad Jokes App is a modern, responsive full-stack web application that fetches ra
                       ▼
 ┌─────────────────────────────────────────────────────────────┐
 │            Node.js + Express Backend (Port 3001)            │
-│  ┌──────────┐  ┌────────────┐  ┌──────────────────────┐    │
-│  │ Middleware│→ │  Routes    │→ │  Controller          │    │
-│  │ (CORS,   │  │ /api/jokes │  │  (req/res handling)  │    │
-│  │  Morgan, │  │ /random    │  └──────────┬───────────┘    │
+│  ┌──────────┐  ┌────────────┐  ┌──────────────────────┐     │
+│  │Middleware│→ │  Routes    │→ │  Controller          │     │
+│  │ (CORS,   │  │ /api/jokes │  │  (req/res handling)  │     │
+│  │  Morgan, │  │ /random    │  └──────────┬───────────┘     │
 │  │  Logger) │  │ /search    │             │                 │
 │  └──────────┘  └────────────┘             ▼                 │
 │                                  ┌─────────────────┐        │
@@ -58,8 +58,8 @@ Dad Jokes App is a modern, responsive full-stack web application that fetches ra
                                             │ HTTP GET
                                             ▼
                               ┌─────────────────────────┐
-                              │  icanhazdadjoke.com API  │
-                              │  (Public External API)   │
+                              │  icanhazdadjoke.com API │
+                              │  (Public External API)  │
                               └─────────────────────────┘
 ```
 
